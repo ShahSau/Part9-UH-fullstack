@@ -1,0 +1,19 @@
+{
+  "name": "patientor-uh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts-node": "ts-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShahSau/Patientor-UH.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShahSau/Patientor-UH/issues"
+  },
+  "homepage": "https://github.com/ShahSau/Patientor-UH#readme"
+}
