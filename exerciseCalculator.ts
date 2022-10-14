@@ -20,6 +20,7 @@ const calculateExercise = (hours:Array<number>, goal:number):Exercise =>{
     let exerciseDays:Array<number> = hours.filter(hour => hour !== 0)
     let totalhours:number = hours.reduce((partial, sum)=> partial + sum, 0)
     let ratingD:number = Math.round(totalhours / hours.length)>5 ? 5 : Math.round(totalhours / hours.length)
+    console.log('total hours', totalhours)
     return {
         periodLength : hours.length,
         trainingDays :exerciseDays.length,
@@ -32,7 +33,18 @@ const calculateExercise = (hours:Array<number>, goal:number):Exercise =>{
 }
 
 try {
-    console.log(calculateExercise([3, 0, 2, 4.5, 0, 3, 1], 2))
+    const target: number = Number(process.argv[2])
+    const work: Array<number> = []
+    
+    if(process.argv.length >= 4){
+        for (let i = 3; i < process.argv.length; i++) {
+            work.push(parseFloat(process.argv[i]))
+        }
+        console.log(calculateExercise(work, target))
+    }else{
+        console.log('minimum 2 arguments are needed')
+    }
+    
 } catch (error:unknown) {
     let errorMessage = 'Failed to calculate BMI,'
     if(error instanceof Error){

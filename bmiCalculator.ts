@@ -20,7 +20,18 @@ const calculateBmi = (height:number, weight:number):string=>{
     }
 } 
 try {
-    console.log(calculateBmi(179, 80))
+    const a: number = Number(process.argv[2])
+    const b: number = Number(process.argv[3])
+    if(process.argv.length === 4){
+    if(!(isNaN(a))&& !(isNaN(b))){
+        console.log(calculateBmi(a,b))
+    }else{
+        console.log('Failed to calculate BMI: inputs must be numbers')
+    }
+    }else{
+        console.log('Failed to calculate BMI: two inputs are needed')
+    }
+    
 } catch (error:unknown) {
     let errorMessage = 'Failed to calculate BMI,'
     if(error instanceof Error){
