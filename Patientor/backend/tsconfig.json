@@ -9,8 +9,6 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
-    "types": [
-      "node"
-    ]
+    "resolveJsonModule": true,
   }
 }
