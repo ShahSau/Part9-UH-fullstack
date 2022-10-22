@@ -4,7 +4,7 @@ export interface DiagnosesEntry {
     latin?: string;
 }
 
-export type Gender = 'male' | 'female'
+export type Gender = 'male' | 'female' | 'other'
 
 export interface PatientsEntry {
     id: string;
